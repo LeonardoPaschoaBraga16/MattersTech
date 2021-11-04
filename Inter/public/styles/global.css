@@ -121,5 +121,60 @@ body{
         width: 100px;
         height: 100px;
     }
+    
 
+}
+
+
+
+/*====== NAVIGATION BAR SECTION ======*/
+nav {
+    background: #181818;
+    height: 90px;
+    width: 100%;
+
+}
+
+#ini, #mat, #cnt, #sob{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+#txt-nav{
+    color: white;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 50px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+a:hover{
+    background: #2b2b2b;
+    transition: 0.5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
 }
