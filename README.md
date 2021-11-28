@@ -1,2 +1,2 @@
 # MattersTech
-site do interdisciplinar
+Site Informativo MattersTech
