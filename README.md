@@ -1,2 +1,2 @@
-# Inter
+# MattersTech
 site do interdisciplinar
