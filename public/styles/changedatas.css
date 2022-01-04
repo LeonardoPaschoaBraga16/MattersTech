@@ -1,0 +1,156 @@
+/*====== VARIABLES SECTION ====== */
+:root{
+    --hue:hsla(177, 70%, 41%, 1); /*Main color of the site (Cyan) */
+    --white:#f0f2f5; 
+    --black:#181818;
+    --grey:#808080;
+    --light-grey:#E5E5E5;
+}
+
+/*====== RESET SECTION ====== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+button, input{
+    outline: none;
+    border: none;
+}
+
+/*====== BODY SECTION ====== */
+body{
+    background: var(--white);
+    color:var(--black);
+    font-family: 'Poppins', sans-serif;
+
+}
+/*====== HEADER SECTION ====== */
+#header{
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem;
+    color:var(--white);
+    background: var(--black);
+}
+#header img{
+    width: 50px;
+    height: 50px;
+}
+/*====== BODY SECTION ====== */
+body{
+    color:var(--black);
+    font-family: 'Poppins', sans-serif;
+    background: url('../assets/wallpaper_perfil.png');
+    background-size: cover;
+}
+/*====== MAIN SECTION ====== */
+
+main form{
+    width: min(500px, 80%);
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 0.5rem;
+    background: var(--white);
+    gap:0.5rem;
+    margin: 3rem auto;
+}
+main form .fa-user-edit{
+    font-size: 8rem;
+    margin: 0 auto 3rem ;
+    color: var(--grey);
+}
+main form label{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+main form input{
+    width: 100%;
+    padding: 0.6rem;
+    outline: none;
+    color: var(--grey);
+    font-size: 1.1rem;
+}
+/*====== BUTTONS SECTION ====== */
+#changepass_buttons{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+#changepass_buttons a, #changepass_buttons button {
+    background: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+#changepass_buttons a{
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+#changepass_buttons button{
+    border: 1px solid var(--hue);
+    color:  var(--hue);
+    cursor: pointer;
+}
+#changepass_buttons a:hover{
+    background: var(--black);
+    color: var(--white);
+}
+#changepass_buttons button:hover{
+    background: var(--hue);
+    color: var(--white);
+}
+.error{
+    width: 100%;
+    background: rgba(255, 0,0, 0.3);
+    color: red;
+    padding:0.5rem;
+    text-align: center;
+}
+.success{
+    width: 100%;
+    background: rgba(0, 255,0, 0.3);
+    color:green;
+    padding:0.5rem;
+    text-align: center;
+}
+/*====== FOOTER SECTION ====== */
+footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--grey)
+}
+@media (max-width:800px){
+    html{
+        font-size: 0.8rem;
+    }
+    @media (max-width:500px){
+        html{
+            font-size: 0.68rem;
+        }
+        #header img{
+            width: 30px;
+            height:30px;
+        }
+        main form{
+            margin-top: 10rem;
+        }
+    }
+}

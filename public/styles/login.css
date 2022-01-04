@@ -1,0 +1,204 @@
+/*====== VARIABLES SECTION ====== */
+:root{
+    --hue:hsla(177, 70%, 41%, 1); /*Main color of the site (Cyan) */
+    --white:#f0f2f5; 
+    --black:#181818;
+    --grey:#808080;
+    --light-grey:#E5E5E5;
+    --instagram:#E4405F;
+    --facebook:#1877F2;
+    --gmail:#EA4335;
+    --twitter:#1DA1F2;
+}
+
+/*====== RESET SECTION ====== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+button, input{
+    outline: none;
+    border: none;
+}
+/*====== BODY SECTION ====== */
+body{
+    color:var(--black);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*====== HEADER SECTION ====== */
+#login_header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+#login_header h1{
+    font-weight: 700;
+    color: var(--white);
+}
+#login_header .logo{
+    width:50px;
+    height: 50px;
+}
+/*====== MAIN SECTION ====== */
+
+.login_content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+#login_extras{
+    justify-content: stretch;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap:8rem;
+    justify-content: center;
+    background: var(--hue);
+    padding:0 2rem 0;
+    color:var(--white);
+    text-align: justify;
+    font-size: 1.25rem;
+    
+}
+#login_extras_contact{
+   text-align: center;
+   margin-bottom: 3rem;
+}
+#login_extras_contact_icons{
+    display: flex;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+#instagram{
+    color:var(--instagram);
+}
+#facebook{
+    color:var(--facebook);
+}
+#twitter{
+    color:var(--twitter);
+}
+.contact_icon{
+    font-size: 1.5rem;
+    cursor:pointer;
+    transition: transform .3s;
+}
+.contact_icon:hover{
+    transform: translateY(-0.3rem);
+}
+
+/*====== Login_form SECTION ====== */
+.error{
+    padding:0.5rem 2rem;
+    width: 100%;
+    text-align: center;
+    background: rgba(255,0,0,0.4);
+    color:var(--instagram);
+}
+#login_form{
+    padding:8rem 2rem;
+    flex:3;
+}
+#login_form form{
+    padding: 2rem 5rem;
+    margin: 0 auto;
+    width: min(500px, 90%);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.fa-user-circle{
+    font-size: 8rem;
+    color:var(--hue);
+    margin:0 auto 1.5rem;
+}
+#username, #password{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    font-size: 1.1rem;
+    color:#808080;
+    background: none;
+    padding:1px;
+    width:100%;
+}
+#forgot_password_link{
+    width: 100%;
+    text-align: right;
+    font-size: 0.9rem;
+}
+#forgot_password_link a{
+    color: var(--grey);
+}
+#login_submit_btn{
+    background: var(--hue);
+    color:var(--white);
+    font-weight: 600;
+    padding:1rem 2rem;
+    margin-top:1rem;
+    cursor:pointer;
+    transition: transform .5s;
+}
+#login_submit_btn:hover{
+    transform: translateY(-0.2rem);
+}
+#singup_link{
+    margin-top: 1rem;
+    color:var(--grey);
+    margin:0 auto;
+}
+/*====== FOOTER SECTION ====== */
+
+/*====== MEDIA SECTION ====== */
+@media(max-width: 950px ){
+    html{
+        font-size: 0.9rem;
+    }
+    .login_content{
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100%;
+    }
+    #login_extras{
+        padding:2rem;
+        flex:1
+    }
+    #login_extras_message{
+        margin-bottom: 5rem;
+    }
+    #login_form{
+        flex:1;
+    }
+    
+    #login_header h1{
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    @media(max-width: 560px ){
+        #login_form form{
+            padding: 2rem 1rem;
+        }
+    }
+
+}

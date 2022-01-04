@@ -1,0 +1,214 @@
+/*====== VARIABLES SECTION ====== */
+:root{
+    --hue:hsla(177, 70%, 41%, 1); /*Main color of the site (Cyan) */
+    --white:#f0f2f5; 
+    --black:#181818;
+    --grey:#808080;
+    --light-grey:#E5E5E5;
+    --instagram:#E4405F;
+    --facebook:#1877F2;
+    --gmail:#EA4335;
+    --twitter:#1DA1F2;
+}
+
+/*====== RESET SECTION ====== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+button, input{
+    outline: none;
+    border: none;
+}
+/*====== BODY SECTION ====== */
+body{
+    color:var(--black);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*====== HEADER SECTION ====== */
+#register_header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 999;
+}
+#register_header h1{
+    font-weight: 700;
+    color: var(--black);
+}
+#register_header .logo{
+    width:50px;
+    height: 50px;
+}
+/*====== MAIN SECTION ====== */
+
+.error{
+    background: #F2DEDE;
+    color: #a94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.success{
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.register_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+#register_extras{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap:8rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--hue);
+    padding:0 2rem 0;
+    color:var(--white);
+    text-align: justify;
+    font-size: 1.25rem;
+    
+}
+#register_extras_contact{
+   text-align: center;
+   margin-bottom: 3rem;
+}
+#register_extras_contact_icons{
+    display: flex;
+    gap:3rem;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+#instagram{
+    color:var(--instagram);
+}
+#facebook{
+    color:var(--facebook);
+}
+#twitter{
+    color:var(--twitter);
+}
+.contact_icon{
+    font-size: 1.5rem;
+    cursor:pointer;
+    transition: transform .3s;
+}
+.contact_icon:hover{
+    transform: translateY(-0.3rem);
+}
+
+/*====== Login_form SECTION ====== */
+#register_form{
+    padding:8rem 2rem;
+    flex:3;
+}
+#register_form form{
+    padding: 1rem 4rem;
+    margin: 0 auto;
+    width: min(600px, 90%);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.fa-user-circle{
+    font-size: 7rem;
+    color:var(--hue);
+    margin:0 auto 1.2rem;
+}
+#username, #password, #email, #name, #confirm{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--black);
+    font-size: 1.1rem;
+    color:#808080;
+    background: none;
+    padding:0.3rem;
+    width:100%;
+}
+#register_submit_btn{
+    background: var(--hue);
+    color:var(--white);
+    font-weight: 600;
+    padding:1rem 2rem;
+    margin-top:1rem;
+    cursor:pointer;
+    transition: transform .5s;
+}
+#register_submit_btn:hover{
+    transform: translateY(-0.2rem);
+}
+#register_link{
+    margin: 1rem auto 0;
+    color:var(--grey);
+    margin:0 auto;
+}
+#register_link a{ 
+    color: var(--hue)
+}
+/*====== FOOTER SECTION ====== */
+
+/*====== MEDIA SECTION ====== */
+@media(min-width: 1280px ){
+
+    .register_content{
+        
+        height: 100%;
+    }
+
+}
+@media(max-width: 950px ){
+    html{
+        font-size: 0.9rem;
+    }
+    .register_content{
+        flex-direction: column;
+        width: 100%;
+    }
+    #register_extras{
+        padding:2rem;
+        flex:1
+    }
+    #register_extras_message{
+        margin-bottom: 5rem;
+    }
+    #register_form{
+        flex:1
+    }
+    @media(max-width: 560px ){
+        #register_form form{
+            padding: 2rem;
+        }
+        #register_link{
+            font-size: 0.9rem;
+        }
+    }
+   
+    }
